@@ -19,14 +19,10 @@ NotionMarkdownify is a program that converts notion pages stored in the Notion d
 ~~~TypeScript
 import { Client } from '@notionhq/client';
 import { NotionDownify } from './index';
-import * as dotenv from 'dotenv';
-dotenv.config();
 
-const {
-  NOTION_API_KEY = '',
-  DATABASE_ID = '',
-  CONTENT_LOCATION = ''
-} = process.env;
+const NOTION_API_KEY = 'your notion api token';
+const DATABASE_ID = 'your notion database id';
+const CONTENT_LOCATION = 'your content location';
 
 // A NOTION_API_KEY is required to create a Client object.
 const notion = new Client({ auth: NOTION_API_KEY });
